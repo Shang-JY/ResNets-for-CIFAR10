@@ -16,13 +16,6 @@ import hiddenlayer as hl
 from tqdm import tqdm
 
 
-# parser = argparse.ArgumentParser(description='PyTorch CIFAR10 Training')
-# parser.add_argument('--model', default='ResNet18', type=str, help='choose model')
-# parser.add_argument('--lr', default=0.1, type=float, help='set learning rate')
-# parser.add_argument('--resume', '-r', action='store_true',
-#                     help='resume from snapshot')
-# args = parser.parse_args()
-
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 CLASSES = ['plane', 'car', 'bird', 'cat', 'deer',
            'dog', 'frog', 'horse', 'ship', 'truck']
@@ -44,6 +37,7 @@ MODELS = ['resnet_O', 'resnet_N', 'resnet_B', 'resnet_C', 'resnet_P']
 # CIFAR-10:  
 # (0.4914, 0.4822, 0.4465), (0.247, 0.243, 0.261)
 # Data
+
 transform_train = transforms.Compose([
     transforms.RandomCrop(32, padding=4),
     transforms.RandomHorizontalFlip(),
@@ -121,8 +115,8 @@ def epoch_time(start_time, end_time):
 
 
 def run(model_name, l1_enable=False, Adam_enable=False, redu_enable=False, resume=False ,N_EPOCHS = 60, l1_lambda = 0.001, l2_alpha = 5e-4, learning_rate = 1e-2, BATCH_SIZE = 128):
-    best_acc = 0  # best test accuracy
-    start_epoch = 0  # start from epoch 0 or last checkpoint epoch
+    best_acc = 0
+    start_epoch = 0
 
     trainset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform_train)
     train_loader = torch.utils.data.DataLoader(trainset, batch_size=BATCH_SIZE, shuffle=True, num_workers=1)
