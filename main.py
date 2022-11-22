@@ -1,3 +1,8 @@
+'''
+Jiayi Shang
+11/15/2022
+
+'''
 import torch
 import torch.nn as nn
 import torch.optim as optim
