@@ -14,9 +14,11 @@ The settings and accuracies of each model are as follows. We changed, the type o
 |-----------|---------:|--------:|:-----------------:|
 |ResNet_O   |    ResNet(64, Bottleneck, [3, 4, 6, 3], 4)    | 22M   | 94.76%|
 |ResNet_N   |    ResNet(64, BasicBlock, [3, 4, 6], 8)       |  8M   | 94.63%|
-|ResNet_O   |    ResNet(64, BasicBlock, [2, 2, 2, 2], 4)    | 11M   | 94.78%|
-|ResNet_O   |    ResNet(16, BasicBlock, [2, 2, 2, 2], 4)    | 0.7M  | 91.51%|
-|ResNet_O   |    ResNet(16, BasicBlock, [2, 2, 2, 2], 3)    | 0.7M  | 91.18%|
+|ResNet_B   |    ResNet(64, BasicBlock, [2, 2, 2, 2], 4)    | 11M   | 94.78%|
+|ResNet_C   |    ResNet(16, BasicBlock, [2, 2, 2, 2], 4)    | 0.7M  | 91.51%|
+|ResNet_P   |    ResNet(16, BasicBlock, [2, 2, 2, 2], 3)    | 0.7M  | 91.18%|
+
+![alt text](https://github.com/Shang-JY/ResNets-for-CIFAR10/blob/main/figure/resnet_P_progress.png)
 
 
 In addition, we conducted some comparison experiments on the training strategies. The effects of image augmentation, learning rate, batch_size, optimizer, scheduler, regularizer etc. However, time is limited and there are limited tests on this part, so if you are interested, we have reserved the interface for you to experiment.
