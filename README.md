@@ -10,7 +10,7 @@ The data folder stores the CIFAR10 dataset; the history folder stores the record
 
 The snapshot folder stores the snapshots of different epochs of the model and parameters of the network. 
 
-The definition and generation mechanism of the residual network are offloaded in ResNet.py, 
+The definition and generation mechanism of the residual network are in ResNet.py, 
 
 The code for training and testing is in main.py.
 
